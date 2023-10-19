@@ -27,8 +27,8 @@ const WeatherApp = () => {
     const location = document.getElementsByClassName("weather-location");
 
     humidity[0].innerHTML = data.main.humidity + " %";
-    wind[0].innerHTML = data.wind.speed + " Km/h";
-    temperature[0].innerHTML = data.main.temp + "°c";
+    wind[0].innerHTML = Math.floor(data.wind.speed)+ " Km/h";
+    temperature[0].innerHTML =Math.floor(data.main.temp) + "°c";
     location[0].innerHTML = data.name;
 
     if (data.weather[0].icon === "01d" || data.weather[0].icon === "01n") {
