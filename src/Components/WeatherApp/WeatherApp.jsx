@@ -11,6 +11,11 @@ import humidity_icon from "../Assets/humidity.png";
 const WeatherApp = () => {
   let api_key = "b1d638be2a4f3c8157cffdb461d23b0f";
   const [wicon, setWicon] = useState(cloud_icon);
+  document.addEventListener("keydown", function(e){
+    if(e.key==="Enter"){
+      search();
+    }
+  });
   const search = async () => {
     const element = document.getElementsByClassName("cityInput");
     if (element[0].value === "") {
